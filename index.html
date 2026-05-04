@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Trusted Ballarat electrician based in Redan. Rewiring, switchboard upgrades, lighting & camera installs. Available 7 days, 7AM–7PM. Call 0427 327 278.">
+<title>LPM Electrical Contracting | Ballarat Electrician</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --yellow:#FFD400;
+  --yellow-dark:#E6BD00;
+  --yellow-tint:#FFF9DB;
+  --yellow-soft:#FFFCEB;
+  --charcoal:#1B1B1F;
+  --charcoal-soft:#2A2A30;
+  --grey:#5A5A60;
+  --light:#F5F5F7;
+  --white:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--charcoal);line-height:1.6;background:var(--white);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Raleway',sans-serif;font-weight:800;line-height:1.15;color:var(--charcoal)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+.nav{position:sticky;top:0;background:var(--charcoal);z-index:1000;border-bottom:3px solid var(--yellow)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1300px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;color:var(--white);font-family:'Raleway',sans-serif;font-weight:900;font-size:1.25rem;letter-spacing:.5px}
+.logo-mark{width:40px;height:40px;background:var(--yellow);display:grid;place-items:center;color:var(--charcoal);transform:rotate(45deg);border-radius:6px}
+.logo-mark i{transform:rotate(-45deg);font-size:1.1rem}
+.logo span{color:var(--yellow)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:var(--white);font-weight:600;font-size:.95rem;transition:color .2s;position:relative}
+.nav-links a:hover{color:var(--yellow)}
+.nav-cta{background:var(--yellow);color:var(--charcoal)!important;padding:10px 20px;border-radius:4px;font-weight:700}
+.nav-cta:hover{background:var(--white)!important}
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer;min-width:48px;min-height:48px}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(135deg,#1B1B1F 0%,#2A2A30 60%,#1B1B1F 100%);color:var(--white);padding:90px 24px 120px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--yellow) 1px,transparent 1px),linear-gradient(90deg,var(--yellow) 1px,transparent 1px);background-size:60px 60px;opacity:.06}
+.hero::after{content:"";position:absolute;right:-150px;top:-150px;width:500px;height:500px;background:radial-gradient(circle,var(--yellow) 0%,transparent 70%);opacity:.15;border-radius:50%}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(255,212,0,.15);color:var(--yellow);padding:8px 18px;border-radius:30px;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:1px solid rgba(255,212,0,.3);margin-bottom:24px}
+.hero h1{font-size:clamp(2rem,4.5vw,3.6rem);color:var(--white);margin-bottom:24px}
+.hero h1 .accent{color:var(--yellow);position:relative;display:inline-block}
+.hero h1 .accent::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:4px;background:var(--yellow)}
+.hero-sub{font-size:1.1rem;color:#D5D5DA;margin-bottom:36px;max-width:600px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font-weight:700;font-family:'Raleway',sans-serif;border-radius:4px;transition:all .25s;cursor:pointer;border:2px solid transparent;font-size:1rem;min-height:48px}
+.btn-primary{background:var(--yellow);color:var(--charcoal)}
+.btn-primary:hover{background:var(--white);transform:translateY(-2px);box-shadow:0 12px 24px rgba(255,212,0,.3)}
+.btn-outline{background:transparent;color:var(--white);border-color:var(--white)}
+.btn-outline:hover{background:var(--white);color:var(--charcoal);transform:translateY(-2px)}
+
+.hero-visual{position:relative;height:380px;display:flex;align-items:center;justify-content:center}
+.hero-card{position:absolute;background:var(--white);color:var(--charcoal);padding:24px;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.hc1{top:0;left:0;width:220px;border-left:5px solid var(--yellow);animation:float 5s ease-in-out infinite}
+.hc2{bottom:20px;right:0;width:240px;border-left:5px solid var(--charcoal);animation:float 5s ease-in-out infinite .5s reverse}
+.hc3{top:50%;left:50%;transform:translate(-50%,-50%);background:var(--yellow);width:160px;text-align:center;padding:30px 20px;border-radius:50%;height:160px;display:grid;place-content:center;box-shadow:0 20px 40px rgba(255,212,0,.4)}
+.hc3 strong{font-family:'Raleway',sans-serif;font-size:1.6rem;display:block;line-height:1}
+.hc3 small{font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:6px}
+.hc1 i,.hc2 i{color:var(--yellow);font-size:1.4rem;margin-bottom:8px}
+.hc2 i{color:var(--charcoal)}
+.hc1 strong,.hc2 strong{font-family:'Raleway',sans-serif;display:block;font-size:1rem;margin-bottom:4px}
+.hc1 span,.hc2 span{font-size:.85rem;color:var(--grey)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* SECTION HEADERS */
+.section{padding:100px 24px}
+.section-tint{background:var(--light)}
+.section-yellow{background:var(--yellow-soft)}
+.eyebrow{display:inline-block;color:var(--yellow-dark);font-weight:700;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;position:relative;padding-left:36px}
+.eyebrow::before{content:"";position:absolute;left:0;top:50%;width:28px;height:2px;background:var(--yellow-dark)}
+.section h2{font-size:clamp(1.8rem,3.2vw,2.6rem);margin-bottom:18px}
+.section-head{max-width:720px;margin-bottom:60px}
+.section-head.center{text-align:center;margin-left:auto;margin-right:auto}
+.section-head.center .eyebrow{padding-left:0}
+.section-head.center .eyebrow::before{display:none}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
+.about-text p{margin-bottom:18px;color:var(--grey);font-size:1.02rem}
+.stats{display:grid;grid-template-columns:1fr;gap:18px}
+.stat{background:var(--white);border-radius:14px;padding:28px 32px;display:flex;align-items:center;gap:24px;box-shadow:0 6px 20px rgba(0,0,0,.05);border-left:6px solid var(--yellow);transition:transform .25s}
+.stat:hover{transform:translateX(6px)}
+.stat-num{font-family:'Raleway',sans-serif;font-size:2.5rem;font-weight:900;color:var(--charcoal);line-height:1;min-width:120px}
+.stat-label{font-weight:600;color:var(--grey);font-size:.95rem;text-transform:uppercase;letter-spacing:1px}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--white);padding:36px 30px;border-radius:8px;border:1px solid #ECECEC;transition:all .3s;position:relative;overflow:hidden}
+.service-card::before{content:"";position:absolute;top:0;left:0;width:0;height:4px;background:var(--yellow);transition:width .3s}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 24px 40px rgba(0,0,0,.08);border-color:var(--yellow)}
+.service-card:hover::before{width:100%}
+.service-icon{width:60px;height:60px;background:var(--yellow-tint);color:var(--charcoal);display:grid;place-items:center;border-radius:8px;font-size:1.4rem;margin-bottom:20px;transition:all .3s}
+.service-card:hover .service-icon{background:var(--yellow);transform:rotate(-8deg)}
+.service-card h3{font-size:1.2rem;margin-bottom:12px}
+.service-card p{color:var(--grey);font-size:.95rem}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
+.why-item{display:flex;gap:24px;padding:32px;background:var(--white);border-radius:10px;transition:all .3s;border-bottom:3px solid transparent}
+.why-item:hover{border-bottom-color:var(--yellow);transform:translateY(-4px);box-shadow:0 16px 30px rgba(0,0,0,.06)}
+.why-icon{flex-shrink:0;width:64px;height:64px;background:var(--charcoal);color:var(--yellow);display:grid;place-items:center;border-radius:50%;font-size:1.4rem}
+.why-item h3{font-size:1.15rem;margin-bottom:8px}
+.why-item p{color:var(--grey);font-size:.93rem}
+
+/* PROCESS */
+.process{position:relative}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;margin-top:40px}
+.steps::before{content:"";position:absolute;top:40px;left:10%;right:10%;height:2px;background:repeating-linear-gradient(90deg,var(--yellow) 0 12px,transparent 12px 22px);z-index:0}
+.step{position:relative;text-align:center;background:transparent;z-index:1}
+.step-num{width:80px;height:80px;background:var(--yellow);color:var(--charcoal);font-family:'Raleway',sans-serif;font-weight:900;font-size:2rem;border-radius:50%;display:grid;place-items:center;margin:0 auto 22px;border:6px solid var(--white);box-shadow:0 8px 20px rgba(255,212,0,.4)}
+.section-tint .step-num{border-color:var(--light)}
+.step h3{font-size:1.1rem;margin-bottom:10px}
+.step p{color:var(--grey);font-size:.92rem}
+
+/* FAQ */
+.faq-list{max-width:850px;margin:0 auto}
+.faq-item{background:var(--white);border-radius:8px;margin-bottom:14px;border:1px solid #E5E5E8;overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:var(--yellow)}
+.faq-q{width:100%;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;font-family:'Raleway',sans-serif;font-weight:700;font-size:1.05rem;color:var(--charcoal);min-height:48px}
+.faq-q i{color:var(--yellow-dark);transition:transform .3s;font-size:1rem}
+.faq-item.open .faq-q i{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--grey);padding:0 26px}
+.faq-item.open .faq-a{max-height:300px;padding:0 26px 22px}
+
+/* TESTIMONIALS */
+.testimonials{position:relative;background:var(--charcoal);color:var(--white);padding:100px 24px;overflow:hidden}
+.testimonials::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,212,0,.15) 1px,transparent 0);background-size:30px 30px;opacity:.4}
+.testimonials .eyebrow{color:var(--yellow)}
+.testimonials .eyebrow::before{background:var(--yellow)}
+.testimonials h2{color:var(--white)}
+.testimonials .section-head{position:relative;z-index:2}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative;z-index:2}
+.t-card{background:var(--charcoal-soft);padding:36px 30px;border-radius:10px;position:relative;border-top:4px solid var(--yellow)}
+.t-card::before{content:"\201C";position:absolute;top:-10px;right:24px;font-family:Georgia,serif;font-size:5rem;color:var(--yellow);line-height:1;opacity:.5}
+.stars{color:var(--yellow);margin-bottom:14px;font-size:.95rem;letter-spacing:2px}
+.t-text{font-style:italic;margin-bottom:22px;color:#D5D5DA;font-size:.97rem}
+.t-author{display:flex;align-items:center;gap:14px;border-top:1px solid #3A3A40;padding-top:18px}
+.t-avatar{width:46px;height:46px;background:var(--yellow);color:var(--charcoal);display:grid;place-items:center;border-radius:50%;font-weight:800;font-family:'Raleway',sans-serif}
+.t-name{font-weight:700;font-size:.95rem}
+.t-meta{font-size:.8rem;color:#8A8A92}
+
+/* HOURS LOCATION */
+.hl-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:stretch}
+.hours-card{background:var(--white);border-radius:12px;padding:40px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.hours-card h3{font-size:1.4rem;margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.hours-card h3 i{color:var(--yellow-dark)}
+.hours-list{list-style:none}
+.hours-list li{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed #E5E5E8;font-size:.95rem}
+.hours-list li:last-child{border-bottom:none}
+.hours-list li span:first-child{font-weight:700}
+.hours-list li span:last-child{color:var(--grey)}
+.hours-cta{margin-top:28px;padding:20px;background:var(--yellow-tint);border-radius:8px;font-size:.9rem}
+.hours-cta strong{display:block;margin-bottom:4px;font-family:'Raleway',sans-serif}
+.map-wrap{border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.05);min-height:480px;position:relative}
+.map-wrap iframe{width:100%;height:100%;min-height:480px;border:0;position:absolute;inset:0}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-info{background:var(--charcoal);color:var(--white);padding:50px 40px;border-radius:14px;position:relative;overflow:hidden}
+.contact-info::before{content:"";position:absolute;right:-80px;bottom:-80px;width:240px;height:240px;background:var(--yellow);border-radius:50%;opacity:.15}
+.contact-info h3{color:var(--white);font-size:1.6rem;margin-bottom:10px;position:relative}
+.contact-info > p{color:#C0C0C5;margin-bottom:30px;position:relative}
+.call-btn{display:flex;align-items:center;gap:18px;background:var(--yellow);color:var(--charcoal);padding:22px 28px;border-radius:10px;font-family:'Raleway',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:30px;position:relative;transition:all .25s}
+.call-btn:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(255,212,0,.4)}
+.call-btn i{font-size:1.6rem}
+.call-btn small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--charcoal-soft)}
+.contact-line{display:flex;gap:14px;margin-bottom:18px;position:relative;align-items:flex-start}
+.contact-line i{color:var(--yellow);font-size:1.1rem;width:24px;margin-top:4px}
+.contact-form{background:var(--white);padding:40px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.contact-form h3{font-size:1.4rem;margin-bottom:24px}
+.contact-form input,.contact-form textarea{width:100%;padding:14px 16px;border:1.5px solid #E5E5E8;border-radius:6px;font-family:inherit;font-size:.95rem;margin-bottom:16px;transition:border-color .2s}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--yellow-dark)}
+.contact-form textarea{min-height:130px;resize:vertical}
+.contact-form button{width:100%}
+
+/* FOOTER */
+footer{background:#0F0F12;color:#A0A0A8;padding:70px 24px 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto 40px}
+.footer-grid h4{color:var(--white);font-size:1rem;margin-bottom:18px;text-transform:uppercase;letter-spacing:1.5px}
+.footer-about p{margin-top:16px;font-size:.92rem}
+.footer-grid ul{list-style:none}
+.footer-grid li{margin-bottom:10px;font-size:.92rem}
+.footer-grid a:hover{color:var(--yellow)}
+.footer-grid li i{color:var(--yellow);margin-right:8px;width:16px}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid #2A2A30;text-align:center;font-size:.85rem}
+
+/* RESPONSIVE */
+@media(max-width:968px){
+  .hero-inner,.about-grid,.contact-grid,.hl-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{height:340px}
+  .services-grid,.t-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--charcoal);flex-direction:column;padding:20px;gap:6px;border-bottom:3px solid var(--yellow);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+  .nav-links.open{display:flex;animation:slide .3s ease}
+  @keyframes slide{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+  .nav-links a{padding:12px 8px;width:100%;display:block;border-bottom:1px solid #2A2A30}
+  .nav-links a:last-child{border-bottom:none}
+  .hamburger{display:block}
+  .section{padding:70px 24px}
+  .hero{padding:60px 24px 80px}
+  .why-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .services-grid,.t-grid,.steps{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .stat{flex-direction:column;text-align:center;gap:8px}
+  .stat-num{min-width:auto;font-size:2.2rem}
+  .hero-visual{height:300px}
+  .hc1{width:170px}
+  .hc2{width:190px}
+  .hc3{width:130px;height:130px}
+  .call-btn{font-size:1.1rem;padding:18px 20px}
+  .btn{padding:14px 22px;width:100%;justify-content:center}
+  .contact-info,.contact-form,.hours-card{padding:30px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>
+      LPM <span>Electrical</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:0427327278" class="nav-cta"><i class="fa-solid fa-phone"></i> 0427 327 278</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag"><i class="fa-solid fa-bolt"></i> Licensed Sparky · Redan, Ballarat</span>
+      <h1>Reliable Sparky Work Across Ballarat — <span class="accent">No Shortcuts</span>, No Surprises</h1>
+      <p class="hero-sub">From rewires and switchboard upgrades to camera installations, LPM Electrical Contracting delivers tidy, dependable work for homes and businesses across Redan, Ballarat and the surrounding region.</p>
+      <div class="hero-ctas">
+        <a href="tel:0427327278" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call LPM Today</a>
+        <a href="#contact" class="btn btn-outline">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card hc1">
+        <i class="fa-solid fa-shield-halved"></i>
+        <strong>Aussie Standards</strong>
+        <span>Fully compliant work</span>
+      </div>
+      <div class="hero-card hc3">
+        <strong>7AM<br>—<br>7PM</strong>
+        <small>7 Days a Week</small>
+      </div>
+      <div class="hero-card hc2">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <strong>Tidy Workmanship</strong>
+        <span>Left clean, every time</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-text">
+      <span class="eyebrow">About LPM</span>
+      <h2>The Local Sparky Who Takes Pride in the Job</h2>
+      <p>LPM Electrical Contracting is run by a proper tradie who treats every job — big or small — with the same care and attention. Customers often mention how easy it is to get in touch, how flexible the scheduling can be, and how the finished work is always clean and done at a fair price.</p>
+      <p>Whether it's a quick repair, new lighting, a switchboard upgrade or a camera install, you'll get straight answers, clear communication and quality workmanship that meets Australian Standards. It's the kind of service Ballarat locals keep coming back to.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">5-Star Reviews</div></div>
+      <div class="stat"><div class="stat-num">7 Days</div><div class="stat-label">Available a Week</div></div>
+      <div class="stat"><div class="stat-num">12hr</div><div class="stat-label">Daily Service Window</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="services">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">What We Do</span>
+      <h2>Electrical Services Done Properly</h2>
+      <p style="color:var(--grey)">From single power points to full home rewires — every job gets the same level of care and craft.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-bolt"></i></div><h3>House Rewiring & New Wiring</h3><p>Full and partial rewires for older Ballarat homes, plus new circuits for renovations and extensions. Every job is completed to Australian Standards with minimal disruption to your day.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Switchboard Upgrades</h3><p>Replace outdated ceramic fuses with modern safety switches and circuit breakers to protect your family and appliances. Ideal for older Redan and Ballarat properties that haven't been touched in decades.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div><h3>Lighting & Power Points</h3><p>Indoor and outdoor lighting design, LED upgrades, downlights, and additional GPOs wherever you need them. Tidy installations with no holes left unfinished and no mess left behind.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-video"></i></div><h3>Security Camera Installation</h3><p>CCTV and security camera systems set up properly the first time, with cabling run cleanly and out of sight. Keep an eye on your home or business with gear that actually works when you need it.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>General Repairs & Fault Finding</h3><p>Tripping circuits, dead power points, dodgy switches — the niggling issues most sparkies don't want to chase. LPM tracks down the problem and fixes it properly, no shortcuts.</p></div>
+      <div class="service-card" style="background:var(--charcoal);color:var(--white);border-color:var(--charcoal)"><div class="service-icon" style="background:var(--yellow)"><i class="fa-solid fa-phone"></i></div><h3 style="color:var(--white)">Need Something Else?</h3><p style="color:#C0C0C5">If it's electrical, chances are LPM can sort it. Give us a call to chat about your job — no obligation, just honest advice.</p><a href="tel:0427327278" style="color:var(--yellow);font-weight:700;display:inline-block;margin-top:12px">Call 0427 327 278 →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>What Sets LPM Apart</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><div class="why-icon"><i class="fa-solid fa-calendar-check"></i></div><div><h3>Available 7 Days, 7AM–7PM</h3><p>Booking around work, school runs and family life shouldn't be a hassle. With flexible scheduling across the week, we'll find a time that genuinely suits you.</p></div></div>
+      <div class="why-item"><div class="why-icon"><i class="fa-solid fa-tag"></i></div><div><h3>Fair, Transparent Pricing</h3><p>You'll know what the job costs before we pick up the tools — no hidden extras and no surprises on the invoice. Just honest pricing for honest work.</p></div></div>
+      <div class="why-item"><div class="why-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><div><h3>Tidy, Quality Workmanship</h3><p>Every job is finished cleanly, tested thoroughly, and left as neat as we found it. Customers consistently call out the care and pride that goes into the work.</p></div></div>
+      <div class="why-item"><div class="why-icon"><i class="fa-solid fa-location-dot"></i></div><div><h3>Local & Reliable</h3><p>Based right here in Redan and serving the wider Ballarat area, we turn up when we say we will. If something changes, you'll hear about it straight away.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-yellow process" id="process">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">How It Works</span>
+      <h2>Four Simple Steps to a Job Well Done</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Get in Touch</h3><p>Give us a call or send a message describing what you need — no job too small to ask about.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Honest Quote</h3><p>We'll talk through your options and provide a clear, fair quote with no hidden costs.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Book a Time That Suits</h3><p>Pick a time between 7AM and 7PM, any day of the week, that works around your schedule.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Job Done Right</h3><p>We complete the work to Australian Standards, tidy up, and walk you through what's been done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Reviews</span>
+      <h2>What Ballarat Locals Are Saying</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="t-text">"LPM gave us great service when we needed - it wasn't the biggest job, but they were easy to get in touch with and flexible with the timing of the work - will definitely look to hire LPM again in the f…"</p>
+        <div class="t-author"><div class="t-avatar">TB</div><div><div class="t-name">Thane Bourne</div><div class="t-meta">Verified Customer</div></div></div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="t-text">"LPM delivered everything you can ask of a Tradesman. Reliable, good communication, a tidy job at a fair price. Highly recommend."</p>
+        <div class="t-author"><div class="t-avatar">HH</div><div><div class="t-name">Helen Hugo</div><div class="t-meta">Verified Customer</div></div></div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="t-text">"New wirings switchs lighting, switchboards, upgrades Camera installation, whatever we throw at him, he handles it no stress. Proper tradie who takes pride in his work and doesn't cut corners."</p>
+        <div class="t-author"><div class="t-avatar">BM</div><div><div class="t-name">Blade Madison</div><div class="t-meta">Verified Customer</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common Questions, Straight Answers</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">What areas around Ballarat do you service? <i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>We're based in Redan and cover the greater Ballarat region, including Sebastopol, Wendouree, Mount Clear, Buninyong and surrounding suburbs. If you're nearby and not sure, just give us a quick call.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are you a fully licensed electrician? <i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Absolutely. All work is carried out by a licensed electrician in line with Australian Standards and Victorian regulations. You'll also receive a Certificate of Electrical Safety where required.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you take on small jobs or only big projects? <i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>Both. Whether it's swapping out a single power point or rewiring an entire home, every job gets the same level of attention. No job is too small to bother with.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How quickly can you come out? <i class="fa-solid fa-plus"></i></button><div class="faq-a"><p>With availability 7 days a week from 7AM to 7PM, we can usually fit you in fairly quickly. For urgent issues like power faults, give us a call straight away and we'll do our best to get there ASAP.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hours">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Hours & Location</span>
+      <h2>Find Us in Redan, Ballarat</h2>
+    </div>
+    <div class="hl-grid">
+      <div class="hours-card">
+        <h3><i class="fa-solid fa-clock"></i> Opening Hours</h3>
+        <ul class="hours-list">
+          <li><span>Monday</span><span>7:00 AM – 7:00 PM</span></li>
+          <li><span>Tuesday</span><span>7:00 AM – 7:00 PM</span></li>
+          <li><span>Wednesday</span><span>7:00 AM – 7:00 PM</span></li>
+          <li><span>Thursday</span><span>7:00 AM – 7:00 PM</span></li>
+          <li><span>Friday</span><span>7:00 AM – 7:00 PM</span></li>
+          <li><span>Saturday</span><span>7:00 AM – 7:00 PM</span></li>
+          <li><span>Sunday</span><span>7:00 AM – 7:00 PM</span></li>
+        </ul>
+        <div class="hours-cta">
+          <strong>Need urgent help?</strong>
+          <span>Call us anytime within hours and we'll do our best to come out the same day.</span>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=710+Ascot+St+S,+Redan+VIC+3350,+Australia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="LPM Electrical Contracting location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="contact">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>Ready to Book Your Sparky?</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Talk to LPM</h3>
+        <p>Quickest way to get a quote or book a time — give us a bell.</p>
+        <a href="tel:0427327278" class="call-btn">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div><small>Call Now</small>0427 327 278</div>
+        </a>
+        <div class="contact-line"><i class="fa-solid fa-location-dot"></i><div>710 Ascot St S,<br>Redan VIC 3350</div></div>
+        <div class="contact-line"><i class="fa-solid fa-clock"></i><div>7 Days a Week<br>7:00 AM – 7:00 PM</div></div>
+        <div class="contact-line"><i class="fa-solid fa-shield-halved"></i><div>Fully Licensed<br>Australian Standards Compliant</div></div>
+      </div>
+      <form class="contact-form" action="mailto:info@lpmelectrical.com.au" method="post" enctype="text/plain">
+        <h3>Request a Quote</h3>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        <textarea name="message" placeholder="Tell us about the job..." required></textarea>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <a href="#" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>
+        LPM <span>Electrical</span>
+      </a>
+      <p>Trusted Ballarat electrician based in Redan. Tidy, dependable workmanship for homes and businesses across the region.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>House Rewiring</li>
+        <li>Switchboard Upgrades</li>
+        <li>Lighting & Power Points</li>
+        <li>Security Cameras</li>
+        <li>Fault Finding</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><i class="fa-solid fa-phone"></i><a href="tel:0427327278">0427 327 278</a></li>
+        <li><i class="fa-solid fa-location-dot"></i>710 Ascot St S, Redan VIC 3350</li>
+        <li><i class="fa-solid fa-clock"></i>7 Days · 7AM–7PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 LPM Electrical Contracting. All rights reserved. · Servicing Ballarat & surrounds.
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    const icon = hamburger.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+  document.querySelectorAll('#navLinks a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      const icon = hamburger.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
